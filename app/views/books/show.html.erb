@@ -1,0 +1,17 @@
+<body>
+    <header>
+        <% if flash[:notice] %>
+          <div class="flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+</header>
+
+
+    <p>本のタイトル:<%= @book.title %></p>
+
+    <p>感想:<%= @book.body %></p>
+    <%= link_to "edit", edit_book_path(@book.id) %>
+    |
+    <a href="/books">Back</a>
+</body>
